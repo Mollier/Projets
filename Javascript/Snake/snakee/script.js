@@ -9,9 +9,9 @@ window.onload = function () {
     var widthInBlocks = canvasWidth / blockSize;
     var heightInBlocks = canvasHeight / blockSize;
     var score;
-    var timeout;
+    var timeOut;
     /*var xCoord = 0;
-    var yCoord = 0;*/
+    var yCoord = 0;* avant la création de block-size */
 
     init();
 
@@ -27,7 +27,10 @@ window.onload = function () {
         ctx = canvas.getContext('2d');
         snakee = new Snake([
             [6, 4],
-            [5, 4][4, 4]
+            [5, 4],
+            [4, 4],
+            [3, 4],
+            [2, 4]
         ], 'right');
         applee = new Apple([10, 10]);
         score = 0;
@@ -37,7 +40,7 @@ window.onload = function () {
     function refreshCanvas() {
         snakee.advance();
         if (snakee.checkCollision()) {
-            //GAME OVER
+            //gameOver();
         } else {
             if (snakee.isEatingApple(applee)) {
                 score++;
@@ -51,14 +54,14 @@ window.onload = function () {
             drawScore();
             snakee.draw();
             applee.draw();
-            timeout = setTimeout(refreshCanvas, delay);
+            timeOut = setTimeout(refreshCanvas, delay);
         }
-
-        /*xCoord += 2;
-        ctx.fillStyle = "#ff0000";
-            ctx.fillRect(xCoord, yCoord, 100, 50);
-            yCoord += 2;*/
     }
+    /*xCoord += 2;
+    ctx.fillStyle = "#ff0000";
+        ctx.fillRect(xCoord, yCoord, 100, 50);
+        yCoord += 2;*/
+
 
     function gameOver() {
         ctx.save();
@@ -81,11 +84,14 @@ window.onload = function () {
     function restart() {
         snakee = new Snake([
             [6, 4],
-            [5, 4][4, 4]
+            [5, 4],
+            [4, 4],
+            [3, 4],
+            [2, 4]
         ], 'right');
         applee = new Apple([10, 10]);
         score = 0;
-        clearTimeout(timeout);
+        clearTimeout(timeOut);
         refreshCanvas();
     }
 
@@ -111,6 +117,7 @@ window.onload = function () {
         this.body = body;
         this.direction = direction;
         this.eatApple = false;
+
         this.draw = function () {
             ctx.save();
             ctx.fillStyle = "#ff0000";
@@ -198,6 +205,7 @@ window.onload = function () {
 
     function Apple(position) {
         this.position = position;
+
         this.draw = function () {
             ctx.save();
             ctx.fillStyle = "#33cc33";

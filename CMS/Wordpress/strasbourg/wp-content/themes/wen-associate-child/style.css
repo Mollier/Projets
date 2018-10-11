@@ -1,0 +1,451 @@
+/*
+Theme Name: wen-associate-child
+Template: wen-associate
+Theme URI: https://wenthemes.com/item/wordpress-themes/wen-associate/
+Author: WEN Themes
+Author URI: https://wenthemes.com/
+Description: WEN Themes proudly presents WEN Associate : as an ode to own affiliation with esteemed Associates. Simplicity - as we practice - is upheld with this general-purpose responsive theme with amass of pluggable sections. A must-have for any Associate-, Corporate- or Business-motive oriented showcasing. Based on the evolving in-house responsive starter theme, options are a-many. Code quality, many hooks, convenient Customizer settings, multiple guided sections - all make up to a responsive, easy-to-use theme. Multiple header layout, responsive menu and slider, standard sections, featured content, footer widgets and an overall sturdy package to install and deploy. WEN Associate could be the next closest theme to setting up a perfect Corporate website for your usable purpose. Official Support Forum: https://themepalace.com/support-forum/ Full Demo: https://wenthemes.com/theme-demos/?demo=wen-associate
+Version: 1.9.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wen-associate
+Tags: one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, translation-ready, theme-options, threaded-comments, footer-widgets, blog, education, custom-logo
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+This theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+3.0 Elements
+4.0 Forms
+5.0 Navigation
+  5.1 Links
+  2.2 Typography
+  5.3 Menus
+6.0 Accessibility
+7.0 Alignments
+8.0 Clearings
+9.0 Widgets
+10.0 Content
+  10.1 Posts and pages
+  10.2 Asides
+  10.3 Comments
+
+11.0 Infinite scroll
+
+12.0 Media
+  12.1 Captions
+  12.2 Galleries
+
+13.0 Miscellaneous
+  13.1.0 Layout section
+    13.1.1 layout
+    13.1.2 Bootstrap hack for 5 column
+
+  13.2.0 Header section
+    13.2.1 Social links
+    13.2.2 Search form
+
+  13.3.0 Featured slider section
+
+  13.4.0 Main content section
+    13.4.1 Welcome section
+    13.4.2 Latest news section
+    13.4.3 Latest service section
+    13.4.4 Latest work section
+    13.4.5 Call to action
+    13.4.6 Testimonial section
+    13.4.7 Post navigation section
+    13.4.8 Sidebar section
+
+  13.5.0 Footer section
+
+  13.6.0  Inner pages
+    13.6.1 Error page
+    13.6.2 Author box
+    13.6.3 Comments form section
+    13.6.4 Breadcrumb
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+.naissance {
+	text-transform: uppercase;
+}
+
+.searchform .search-submit {
+	background-color: black;
+	border: 1px solid #666666;
+}
+
+.fa-chevron-circle-up:before {
+	color: #00008b;
+}
+
+/* header */
+.site-branding h2 {
+	color: whitesmoke;
+	font-size: 25px;
+}
+
+/* SLIDER */
+#featured-slider .cycle-caption {
+	background-color: rgba(0, 0, 0, 0.7)
+}
+
+#main-slider li img {
+	display: none;
+}
+
+/* pagedacceuil */
+#primary {
+	width: 100%;
+}
+
+/* logo */
+.custom-logo {
+	width: 100px;
+	height: 100px;
+}
+
+.site-title a {
+	color: black;
+}
+
+#site-navigation li a:hover,
+#site-navigation li:hover>a,
+#site-navigation li.current-menu-item>a,
+#site-navigation li.current_page_item>a {
+	border-bottom: 5px solid white;
+	opacity: 1;
+}
+
+#btn-search-icon {
+	background: none repeat scroll 0 0 black;
+}
+
+/* nav barre */
+h1.site-title {
+	font-size: 30px;
+	color: white;
+}
+
+#masthead {
+	margin-top: 40px;
+	left: 0;
+	right: 0;
+}
+
+#site-navigation {
+	position: fixed;
+	z-index: 15000;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+/*slider*/
+#main-slider {
+	height: 400px !important;
+}
+
+thead {
+	font-size: 20px;
+}
+
+.header-layout-1 .sidebar-header-right {
+	margin-top: 50px;
+}
+
+/* accueil animation */
+@keyframes tipsy {
+	0 {
+		transform: translateX(-50%) translateY(-50%) rotate(0deg);
+	}
+
+	100% {
+		transform: translateX(-50%) translateY(-50%) rotate(360deg);
+	}
+}
+
+.site-branding h1  {
+	/* z-index: 7000; */
+	color: #fffbf1;
+	text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+	font-size: 80px;
+	font-weight: bold;
+	text-decoration: none;
+	letter-spacing: -3px;
+	margin: 0;
+	position: relative;
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.site-branding h1:before,
+.site-branding h1:after {
+	content: '';
+	padding: 1.3em .4em;
+	position: absolute;
+	left: 50%;
+	width: 65%;
+	top: 50%;
+	display: block;
+	border: 15px solid red;
+	transform: translateX(-50%) translateY(-50%) rotate(0deg);
+	animation: 10s /*infinite*/ alternate ease-in-out tipsy;
+}
+
+.site-branding h1:before {
+	border-color: #d9524a #d9524a rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	z-index: -1;
+}
+
+.site-branding h1:after {
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #d9524a #d9524a;
+	box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+}
+
+/*icon*/
+.icon {
+	text-align: center;
+}
+	/* activite du mois */
+	tbody,
+	td {
+		vertical-align: center;
+	}
+
+	td p {
+		color: black;
+	}
+
+	tbody caption,
+	th,
+	td {
+		color: black;
+		border-bottom: 3px solid #dddddd;
+		border-left: 3px solid #dddddd;
+	}
+
+	tbody img {
+		width: 80%;
+		display: flex;
+		border-radius: 15%;
+		margin: 15px;
+	}
+
+	tbody a {
+		align-items: center;
+		font-size: 20px;
+		color: black;
+	}
+
+	tbody a {
+		padding-bottom: 40px;
+		vertical-align: middle;
+	}
+
+	tbody tr:hover {
+		background-color: #6495ed;
+		opacity: 0.8;
+	}
+
+	.css-events-list {
+		text-align: center;
+	}
+
+	.events-table {
+		color: #6495ed;
+	}
+
+	button {
+		border: solid 2px black;
+		background-color: #6495ed;
+	}
+
+	.em-ticket-select {
+		width: 73%;
+	}
+
+	/* contact */
+	.wpcf7-list-item-label {
+		color: #525252;
+		line-height: 2;
+		font-size: 19px;
+	}
+
+	.ville {
+		margin: 2%;
+		font-size: 1.2em
+	}
+
+	.wpcf7-form {
+		max-width: 500px;
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+		background-color: #6495ed;
+	}
+
+	.envoyer input {
+		/* margin-left: 5%; */
+		color: #525252;
+		background-color: white;
+		margin-bottom: 2%;
+	}
+
+	.envoyer label {
+		font-size: 15px;
+		width: 100%;
+	}
+
+	.entry-content div i {
+		display: none;
+	}
+
+	.form-contact {
+		width: 50%;
+	}
+
+	.form-contact label {
+		width: 100%;
+	}
+
+	.form-contact input {
+		width: 80%;
+	}
+
+	.naissance input {
+		width: 80%;
+	}
+
+	.envoyer>p>input {
+		width: 50%;
+	}
+
+	.wpcf7-form-control {
+		width: 80%;
+	}
+
+	/* heure et carte*/
+	.form-text {
+		display: flex;
+		width: 100%;
+	}
+
+	.form-heure {
+		width: 90%;
+		margin: 10% 2% 0 5%;
+		border: solid 0.3em #6495ed;
+		font-size: 20px;
+	}
+
+	.heure-map {
+		width: 50%;
+	}
+
+	.map {
+		margin: 5%;
+		border: solid 5px #6495ed;
+	}
+
+	/* responsive*/
+	@media only screen and (max-width: 1020px) {
+		.heure-map {
+			display: none;
+		}
+
+		.form-contact {
+			width: 100%;
+		}
+
+		.form-contact input {
+			width: 60%;
+		}
+
+		.wpcf7-form-control wpcf7-textarea {
+			margin: 0;
+		}
+
+		#featured-slider .cycle-next,
+		#featured-slider .cycle-prev {
+			display: none;
+		}
+
+		#main-slider {
+			height: 150px !important;
+		}
+	}
+
+	/* tableau */
+	@media only screen and (max-width: 760px),
+	(min-device-width: 768px) and (max-device-width: 1024px) {
+
+		/* Force table to not be like tables anymore */
+		table,
+		thead,
+		tbody,
+		th,
+		td,
+		tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		#featured-slider {
+			margin-top: 100px;
+		}
+
+		#featured-slider .cycle-next,
+		#featured-slider .cycle-prev {
+			display: none;
+		}
+
+		tr {
+			border: 1px solid #ccc;
+		}
+
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+		}
+
+		td img {
+			margin: 0 auto;
+		}
+
+		/* Now like a table header */
+		/* Top/left values mimic padding */
+		td:before {
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+		}
+
+		div.em-booking-login {
+			margin: 0;
+		}
+	}

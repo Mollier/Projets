@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wen-associate-child\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-20 14:53+0000\n"
+"PO-Revision-Date: 2018-08-20 14:57+0000\n"
+"Last-Translator: nanou <dev-email@flywheel.local>\n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Author URI of the theme
+msgid "https://wenthemes.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://wenthemes.com/item/wordpress-themes/wen-associate/"
+msgstr ""
+
+#. Author of the theme
+msgid "WEN Themes"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"WEN Themes proudly presents WEN Associate : as an ode to own affiliation "
+"with esteemed Associates. Simplicity - as we practice - is upheld with this "
+"general-purpose responsive theme with amass of pluggable sections. A must-"
+"have for any Associate-, Corporate- or Business-motive oriented showcasing. "
+"Based on the evolving in-house responsive starter theme, options are a-many. "
+"Code quality, many hooks, convenient Customizer settings, multiple guided "
+"sections - all make up to a responsive, easy-to-use theme. Multiple header "
+"layout, responsive menu and slider, standard sections, featured content, "
+"footer widgets and an overall sturdy package to install and deploy. WEN "
+"Associate could be the next closest theme to setting up a perfect Corporate "
+"website for your usable purpose. Official Support Forum: https://themepalace."
+"com/support-forum/ Full Demo: https://wenthemes.com/theme-demos/?demo=wen-"
+"associate"
+msgstr ""
+
+#. Name of the theme
+msgid "wen-associate-child"
+msgstr ""
