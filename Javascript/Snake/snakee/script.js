@@ -79,8 +79,8 @@ window.onload = function () {
         ctx.font = "bold 20 px sans-serif";
         ctx.strokeText("Appuie sur la touche", centreX, centreY - 120);
         ctx.fillText("Appuie sur la touche", centreX, centreY - 120);
-        ctx.strokeText("espace pour rejouer", centreX, centreY - 100);
-        ctx.fillText("espace pour rejouer", centreX, centreY - 100);
+        ctx.strokeText("espace pour rejouer", centreX, centreY - 50);
+        ctx.fillText("espace pour rejouer", centreX, centreY - 50);
         ctx.restore();
     }
 
