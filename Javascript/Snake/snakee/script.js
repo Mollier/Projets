@@ -40,7 +40,8 @@ window.onload = function () {
     function refreshCanvas() {
         snakee.advance();
         if (snakee.checkCollision()) {
-            //gameOver();
+            //Appel de la fonction GAME OVER
+            gameOver();
         } else {
             if (snakee.isEatingApple(applee)) {
                 score++;
@@ -75,9 +76,11 @@ window.onload = function () {
         var centreY = canvasHeight / 2;
         ctx.strokeText("Game Over", centreX, centreY - 180);
         ctx.fillText("Game Over", centreX, centreY - 180);
-        ctx.font = "bold 30 px sans-serif";
-        ctx.strokeText("Appuie sur la touche espace pour rejouer", centreX, centreY - 120);
-        ctx.fillText("Appuie sur la touche espace pour rejouer", centreX, centreY - 120);
+        ctx.font = "bold 20 px sans-serif";
+        ctx.strokeText("Appuie sur la touche", centreX, centreY - 120);
+        ctx.fillText("Appuie sur la touche", centreX, centreY - 120);
+        ctx.strokeText("espace pour rejouer", centreX, centreY - 100);
+        ctx.fillText("espace pour rejouer", centreX, centreY - 100);
         ctx.restore();
     }
 
